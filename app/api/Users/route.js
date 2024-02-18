@@ -29,4 +29,4 @@ async function POST(req) {
    }
 }
 
-export {POST as POST}
+export default POST

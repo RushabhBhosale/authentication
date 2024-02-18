@@ -23,9 +23,9 @@ export default function UserForm() {
    const handleSubmit = async (e) => {
       e.preventDefault();
       setErrorMsg("");
-      const res = await fetch("http://localhost:3000/api/Users", {
+      const res = await fetch("/api/Users", {
          method: "POST",
-         body: JSON.stringify({formdata}),
+         body: JSON.stringify(formdata),
          headers: { "Content-Type": "application/json" }
       });
 
@@ -33,8 +33,8 @@ export default function UserForm() {
          const response = await res.json();
          setErrorMsg(response.message);
       } else {
-         // router.refresh();
-         // router.push("/");
+         router.refresh();
+         router.push("/");
       }
    }
 

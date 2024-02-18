@@ -30,7 +30,7 @@ export const options = {
             console.log("Google Profile: ", profile);
             let userRole = "Google User";
  
-            if (profile?.email == "bhosalerushabh0@gmail.com" || "rushabhbhosale25757@gmail.com") {
+            if (profile?.email) {
                userRole = "admin"
             }
 
